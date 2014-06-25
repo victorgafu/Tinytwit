@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Tinytwit.iml" filepath="$PROJECT_DIR$/Tinytwit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tinytwit/Tinytwit-Tinytwit.iml" filepath="$PROJECT_DIR$/Tinytwit/Tinytwit-Tinytwit.iml" />
+    </modules>
+  </component>
+</project>
+

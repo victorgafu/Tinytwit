@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="twit_light_color">#00acee</color>
+    <color name="twit_dark_color">#0092cb</color>
+    <color name="white">#FFFFFF</color>
+</resources>

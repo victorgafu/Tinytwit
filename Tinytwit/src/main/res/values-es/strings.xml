@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- The default language will be English -->
+
+
+    <!-- Titles -->
+    <string name="app_name">Tinytwit</string>
+    <string name="tweet">Tweet</string>
+
+    <!-- UI -->
+    <string name="connect">Conectar</string>
+    <string name="disconnect">Desconectar</string>
+    <string name="refresh">Refrescar</string>
+    <string name="reply">Responder</string>
+    <string name="retweet">¡Retweet!</string>
+    <string name="publish">Publicar</string>
+    <string name="send">¡Tweet!</string>
+    <string name="cancel">Cancelar</string>
+    <string name="default_count">0</string>
+
+    <!-- Hits -->
+    <string name="content">Contenido del tweet</string>
+
+    <!-- Informative messages -->
+    <string name="feed_updated">Feed actualizado</string>
+    <string name="tweet_sent">Tweet enviado con éxito</string>
+
+    <!-- Error messages -->
+    <string name="error_twitter_exception">Se ha producido una TwitterException</string>
+    <string name="error_connection">Error al conectar, comprueba la connexión</string>
+    <string name="error_publish">Error al publicar el Tweet</string>
+    <string name="tweet_not_found">No se ha encontrado el Tweet</string>
+    <string name="error_db">Error de la base de datos</string>
+    <string name="error_create_url">Error al crear la URL</string>
+    <string name="error_create_date">Error al crear la fecha</string>
+    <string name="error_create_tweet">Error al crear el tweet</string>
+    <string name="error_authentication">Error, no estás autenticado</string>
+    <string name="error_size_tweet">¡Error! Un tweet ha que tener entre 1 i 140 carácteres</string>
+
+</resources>

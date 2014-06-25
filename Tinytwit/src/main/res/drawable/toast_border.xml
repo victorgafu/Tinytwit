@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <stroke
+        android:width="2dp"
+        android:color="@color/twit_dark_color" />
+
+    <gradient
+        android:angle="270"
+        android:endColor="@color/twit_light_color"
+        android:startColor="@color/twit_dark_color" />
+
+    <padding
+        android:bottom="2dp"
+        android:left="10dp"
+        android:right="10dp"
+        android:top="2dp" />
+
+    <corners android:radius="20dp" />
+
+</shape>
