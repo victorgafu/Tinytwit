@@ -11,11 +11,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -156,6 +157,7 @@ public class DetailActivity extends FragmentActivity implements MenuItem.OnMenuI
 
         textViewName.setText(tweet.name);
         textViewTweetText.setText(tweet.text);
+        Linkify.addLinks(textViewTweetText, Linkify.WEB_URLS);
         textViewFavoriteCount.setText(tweet.favorites + "");
         textViewRetweetCount.setText(tweet.retweets + "");
         textViewPubDate.setText(tweet.publicationDate.toString());

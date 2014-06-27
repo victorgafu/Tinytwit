@@ -35,7 +35,8 @@
                 android:layout_marginLeft="5dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/twit_light_color"
-                android:textStyle="italic" />
+                android:textStyle="italic"
+                android:autoLink="web"/>
         </LinearLayout>
 
         <View

@@ -12,6 +12,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -644,19 +645,32 @@ public class MainActivity extends Activity implements MenuItem.OnMenuItemClickLi
 
         @Override
         protected void onPostExecute(List<Tweet> feed) {
-            // Delete the older profiles and download the news.
+            // Delete the older profiles.
             String folder = getFilesDir() + PROFILES_FOLDER;
             String[] urlsPhotos = photos.toArray(new String[photos.size()]);
             DiskUtilities.clearDirectory(folder);
-            new DownloadImageAsyncTask(MainActivity.this, folder)
-                    .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR ,urlsPhotos);
+            //Download the profile images on parallel or serial depending on the version
+            if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.HONEYCOMB_MR1){
+                new DownloadImageAsyncTask(MainActivity.this, folder)
+                        .execute(urlsPhotos);
+            }else{
+                new DownloadImageAsyncTask(MainActivity.this, folder)
+                        .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR ,urlsPhotos);
+            }
 
-            // Delete the older media and download the news
+
+            // Delete the older media.
             String[] urlsMedia = medias.toArray(new String[medias.size()]);
             folder = getFilesDir() + MEDIA_FOLDER;
             DiskUtilities.clearDirectory(folder);
-            new DownloadImageAsyncTask(MainActivity.this, folder)
-                    .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, urlsMedia);
+            //Download the media images on parallel or serial depending on the version
+            if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.HONEYCOMB_MR1){
+                new DownloadImageAsyncTask(MainActivity.this, folder)
+                        .execute(urlsMedia);
+            }else{
+                new DownloadImageAsyncTask(MainActivity.this, folder)
+                        .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, urlsMedia);
+            }
 
             tweets = feed;
             feed_updated = true;
