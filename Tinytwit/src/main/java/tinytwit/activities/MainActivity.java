@@ -649,14 +649,14 @@ public class MainActivity extends Activity implements MenuItem.OnMenuItemClickLi
             String[] urlsPhotos = photos.toArray(new String[photos.size()]);
             DiskUtilities.clearDirectory(folder);
             new DownloadImageAsyncTask(MainActivity.this, folder)
-                    .execute(urlsPhotos);
+                    .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR ,urlsPhotos);
 
             // Delete the older media and download the news
             String[] urlsMedia = medias.toArray(new String[medias.size()]);
             folder = getFilesDir() + MEDIA_FOLDER;
             DiskUtilities.clearDirectory(folder);
             new DownloadImageAsyncTask(MainActivity.this, folder)
-                    .execute(urlsMedia);
+                    .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, urlsMedia);
 
             tweets = feed;
             feed_updated = true;

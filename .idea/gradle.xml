@@ -7,8 +7,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="C:\Users\Gonzalo\AndroidStudioProjects\Tinytwit" />
-            <option value="C:\Users\Gonzalo\AndroidStudioProjects\Tinytwit\Tinytwit" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Tinytwit" />
           </set>
         </option>
       </GradleProjectSettings>
