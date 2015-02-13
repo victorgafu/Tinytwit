@@ -654,6 +654,7 @@ public class MainActivity extends Activity implements MenuItem.OnMenuItemClickLi
                 new DownloadImageAsyncTask(MainActivity.this, folder)
                         .execute(urlsPhotos);
             }else{
+
                 new DownloadImageAsyncTask(MainActivity.this, folder)
                         .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR ,urlsPhotos);
             }
